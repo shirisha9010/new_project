@@ -1,16 +1,14 @@
 #include "unity.h"
-#include <calculator_operations.h>
+#include <gpa.h>
 
 /* Modify these two lines according to the project */
-#include <calculator_operations.h>
-#define PROJECT_NAME    "Calculator"
+#include <gpa.h>
+#define PROJECT_NAME    "GPA/CGPA calculator and gradepoint predictor"
 
 /* Prototypes for all the test functions */
-void test_add(void);
-void test_add_testcase2(void);
-void test_subtract(void);
-void test_multiply(void);
-void test_divide(void);
+void semester();
+void grade_predictor();
+void cgpa_calculator();
 
 /* Required by the unity test framework */
 void setUp(){}
@@ -24,45 +22,32 @@ int main()
   UNITY_BEGIN();
 
 /* Run Test functions */
-  RUN_TEST(test_add);
-  RUN_TEST(test_add_testcase2);
-  RUN_TEST(test_subtract);
-  RUN_TEST(test_multiply);
-  RUN_TEST(test_divide);
+  RUN_TEST(semester);
+  RUN_TEST(grade_predictor);
+  RUN_TEST(cgpa_calculator);
 
   /* Close the Unity Test Framework */
   return UNITY_END();
 }
 
 /* Write all the test functions */ 
-void test_add(void) {
-  TEST_ASSERT_EQUAL(30, add(10, 20));
-  TEST_ASSERT_EQUAL(-10, add(10, -20));
-  TEST_ASSERT_EQUAL(-30, add(-10, -20));
-  TEST_ASSERT_EQUAL(10, add(-10, 20));
-}
-void test_add_testcase2(void) {
- 
+void semester(void) {
+  TEST_ASSERT_EQUAL(9.0, add(, 20));
+  
   /* Dummy fail*/
-  // TEST_ASSERT_EQUAL(1500, add(750, 7500));
+  TEST_ASSERT_EQUAL(15000, add(7500, 7500));
 }
-void test_subtract(void) {
+
+void cgpa_calculator(void) {
   TEST_ASSERT_EQUAL(-3, subtract(0, 3));
   
   /* Dummy fail*/
-  // TEST_ASSERT_EQUAL(1, subtract(1000, 900));
+  TEST_ASSERT_EQUAL(100, subtract(1000, 900));
 }
 
-void test_multiply(void) {
+void grade_pointer(void) {
   TEST_ASSERT_EQUAL(0, multiply(1, 0));
   
   /* Dummy fail*/
-  // TEST_ASSERT_EQUAL(2, multiply(2, 5));
-}
-
-void test_divide(void) {
-  TEST_ASSERT_EQUAL(0, divide(1, 0));
-  
-  /* Dummy fail*/
-  // TEST_ASSERT_EQUAL(3, divide(2, 2));
+  TEST_ASSERT_EQUAL(10, multiply(2, 5));
 }
