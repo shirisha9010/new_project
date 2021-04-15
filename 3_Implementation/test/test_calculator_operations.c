@@ -3,11 +3,10 @@
 
 /* Modify these two lines according to the project */
 #include <gpa.h>
-#define PROJECT_NAME    "GPA/CGPA calculator and gradepoint predictor"
+#define PROJECT_NAME    "GPA/CGPA calculator"
 
 /* Prototypes for all the test functions */
 void semester();
-void grade_predictor();
 void cgpa_calculator();
 
 /* Required by the unity test framework */
@@ -23,7 +22,6 @@ int main()
 
 /* Run Test functions */
   RUN_TEST(semester);
-  RUN_TEST(grade_predictor);
   RUN_TEST(cgpa_calculator);
 
   /* Close the Unity Test Framework */
@@ -45,9 +43,3 @@ void cgpa_calculator(void) {
   TEST_ASSERT_EQUAL(100, subtract(1000, 900));
 }
 
-void grade_pointer(void) {
-  TEST_ASSERT_EQUAL(0, multiply(1, 0));
-  
-  /* Dummy fail*/
-  TEST_ASSERT_EQUAL(10, multiply(2, 5));
-}
