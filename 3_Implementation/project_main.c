@@ -1,91 +1,49 @@
-#include "calculator_operations.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include "gpa.h"
 
-
-#define INVALID (0)
-
-/* Calculator operation requested by user*/
-unsigned int calculator_operation = 0;
-
-/* Operands on which calculation is performed */
-int calculator_operand1 = 0;
-int calculator_operand2 = 0;
-
-/* Valid operations */
-enum operations{ SGPA, CGPA };
-
-
-/* Start of the application */
 int main()
 {
-    double gpa, credit, cgpa=0, s_cgpa, s_credit=0;
-    int choice;
-
-    printf("\t\tCGPA CALCULATOR\n");
-    printf("\t\t---------------\n\n");
-
-    printf("\t1. Subject wise CGPA\n\t2. Semister wise CGPA\n\t3. Grade & credit wise CGPA\nEnter your choice:\n");
-    scanf("%d", &choice);
-
-    printf("\n");
-
-    while(1)
-    {
-        if(choice==3)
-        {
-            printf("Enter your grade & credit (0 0 for Exit):\n");
-            scanf("%lf%lf", &gpa, &credit);
-
-            if(gpa==0 && credit==0)
-            {
-                break;
-            }
-
-            cgpa = cgpa + (gpa*credit);
-            s_credit = s_credit + credit;
-
-            s_cgpa = cgpa / s_credit;
-        }
-        else if(choice==2 || choice==1)
-        {
-            if(choice==2)
-            {
-                printf("Enter your Semister's GPA (0 for Exit):\n");
-            }
-            if(choice==1)
-            {
-                printf("Enter your Subject's GPA (0 for Exit):\n");
-            }
-            scanf("%lf", &gpa);
-
-            if(gpa==0)
-            {
-                break;
-            }
-
-            cgpa = cgpa + gpa;
-            s_credit++;
-
-            s_cgpa = cgpa / s_credit;
-        }
-        else
-        {
-            break;
-        }
-
-    }
-    if(choice==3)
-    {
-        printf("\n\tYour CGPA is: %.2lf\n\tAnd total credit: %.0lf\n", s_cgpa, s_credit);
-    }
-    else if(choice==2 || choice==1)
-    {
-        printf("\n\tYour CGPA is: %.2lf\n\tAnd total subject: %.0lf\n", s_cgpa, s_credit);
-    }
-    else
-    {
-        printf("Invalid choice\n");
-    }
-
-
-    return 0;
+	int option;
+	printf("GPA/CGPA Calculator and grade point predictor\n");
+	printf("Select the options based on your requirement ");
+	printf("1. GPA calculator \n 2. CGPA calculator \n 3.Grade point predictor: \n");
+	scanf("%d",&option);
+	if(option==1)
+	{
+	//printf("The GPA for semester is %f",semester());
+	semester();
+	}
+	if(option==2)
+	{
+	//printf("The cumulative GPA of all your semesters is: %f",cgpa_calculator());
+	cgpa_calculator();
+	}
+	if(option==3)
+	{
+	grade_predictor();
+	}
+	/*switch(option)
+	{
+	case '1' : semester1();
+	           break;
+	case '2' : semester2();
+	           break;
+	case '3' : semester3();
+	           break;
+	case '4' : semester4();
+	           break;
+	case '5' : semester5();
+	           break;
+	case '6' : semester6();
+	           break;
+	case '7' : semester7();
+	           break;
+	case '8' : semester8();
+	           break;
+	case '9' : CGPA();
+	           break;
+	default  : printf("Please enter any one of the options to continue");
+	}*/
+	return 0;
 }
