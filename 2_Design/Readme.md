@@ -1,4 +1,4 @@
-![CALCULATOR](https://user-images.githubusercontent.com/80394921/114668527-799f6100-9d1e-11eb-8929-2c1b0e7e0c24.png)
+![CALCULATOR](https://user-images.githubusercontent.com/82135750/114898015-64febe00-9e2f-11eb-9652-ded9b75d4f9e.png)
 # Design
 
 ## High Level Design 
