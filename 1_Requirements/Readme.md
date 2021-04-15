@@ -38,32 +38,9 @@ https://gpa-cgpa.readthedocs.io/en/latest/_images/cgpa.jpg
 
     
 ## SWOT ANALYSIS
-Strength
-Resource availability
-Record traking
-Known past data
-Precise
 
-Weakness
-Gaps in knowledge and implementation
-Process and system
-Completing Projects
-Unforeseen problems
-unwanted behaviour
+![SWOT](https://user-images.githubusercontent.com/80394921/114668527-799f6100-9d1e-11eb-8929-2c1b0e7e0c24.png)
 
-Opportunities
-Improve safety
-Skill advancement
-Emerging and developing market
-Changing patterns
-Easy calculation
-saves time
-
-Threats
-Competitor Activities
-Academic work
-Scope creep
-Constraints
 
 # 4W&#39;s and 1&#39;H
 
