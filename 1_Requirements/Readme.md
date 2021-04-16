@@ -9,7 +9,7 @@ Calculators are very simple tool, which helps students to play with the problems
 Calculators also have the ability to store numbers into computer memory. Basic calculators usually store only one number at a time; more specific types are able to store many numbers represented in variables. The variables can also be used for constructing formulas. Some models have the ability to extend memory capacity to store more numbers; the extended memory address is termed an array index.
 
 ## Defining Our System
-<<<<<<< HEAD
+
  In this the calculator has 9 operators :
 `- Addition
  - Subtraction
@@ -22,12 +22,7 @@ Calculators also have the ability to store numbers into computer memory. Basic c
  - Area_of_Parallelogram
  - Area_of_Triangle
     
-      
-## SWOT ANALYSIS
 
-![SWOT](https://user-images.githubusercontent.com/82135750/114895658-50b9c180-9e2d-11eb-8257-383ad7cbf397.png)
-
-=======
  In this the calculator has 10 operators :
  -Addition
  - Subtraction
