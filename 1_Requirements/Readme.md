@@ -25,7 +25,7 @@ Calculators also have the ability to store numbers into computer memory. Basic c
 
 
 ## SWOT ANALYSIS
->>>>>>> f668a276d46dc3601284b3f970b4b67d887f7eb5
+
 
 ![SWOT](https://user-images.githubusercontent.com/82135750/114895658-50b9c180-9e2d-11eb-8257-383ad7cbf397.png)
 
