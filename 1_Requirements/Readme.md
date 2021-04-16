@@ -7,7 +7,7 @@ Calculators also have the ability to store numbers into computer memory. Basic c
 
 ## Defining Our System
  In this the calculator has 9 operators :
-`-Addition
+ -Addition
  -Subtraction
  -Multiply
  -Division 
