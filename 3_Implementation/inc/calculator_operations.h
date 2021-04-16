@@ -1,9 +1,23 @@
-#ifndef GP_A
-#define GP_A
+ypedef struct operand{
+    int ope1;                        //variables used in calculator through structure
+    int ope2;
+}operand;
 
-int semester();
-int cgpa_calculator();
-int grade_predictor();
+/**
+ * @brief Operations involved in this calculator
+ * 
+ * @param find 
+ * @return int 
+ */
 
-#endif
-© 2021 GitHub, Inc.
+int addition(operand *ope);
+int subtraction(operand *ope);
+int multiplication(int *operand1, int *operand2);
+int division(int *operand1, int *operand2);           // variables passed through pointers
+int squareroot(int *operand3);
+int factorial(int *operand);
+int Area_of_Rectangle(int *operand1,int *operand2);
+int Area_of_Square(int *operand1, int *operand2);
+int Area_of_Parallelogram(int *operand1, int *operand2);
+int Area_of_Triangle(int *operand1, int *operand2);
+#endif  
