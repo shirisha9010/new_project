@@ -1,4 +1,4 @@
-#include "calculator_operations.h"
+#include  "calculator_operations.h"
 #include "stdio.h"
 /**
  * @brief   FUNCTION DECLARATION OF ALL THE FUNCTIONS CALLED
@@ -18,7 +18,7 @@ int subtraction(operand  *find){
 }
 
 int multiplication(int *operand1,int *operand2){
-   int final= (operand1)(*operand2);                         // multiplication of operands
+   int final= (*operand1)*(*operand2);                         // multiplication of operands
     printf(" multiplication = %d\n",final);
     return final;
 }
@@ -54,7 +54,7 @@ int factorial(int *operand3){
 }
 
 int Area_of_Rectangle(int *operand1,int *operand2){
-   float final= (operand1)(*operand2);               
+   float final= (*operand1)*(*operand2);               
     printf(" Area_of_Rectangle = %.3f\n",final);                             // Area_of_Rectangle of operand
     return final;
 }
@@ -66,12 +66,16 @@ int Area_of_Square(int *operand3){
 }
 
 int Area_of_Parallelogram(int *operand1,int *operand2){
-   int final= (operand1)(*operand2);               
+   int final= (*operand1)*(*operand2);               
     printf(" Area_of_parallelogram = %d\n",final);                           //  Area_of_Parallelogram operand
     return final;
 }
 int Area_of_Triangle(int *operand1,int *operand2){
-   int final= (0.5)(*operand1)(*operand2);               
+   int final= (0.5)*(*operand1)*(*operand2);               
     printf(" Area_of_Triangle = %d\n",final);                                // Area_of_Triangle of operand
     return final;
 }
+/**
+ * @brief 
+ * 
+ */
