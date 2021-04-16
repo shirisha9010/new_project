@@ -1,81 +1,72 @@
 # Requirements
 ## Introduction
- The GPA and CGPA calculator is an academic tool to calculate the student performance either at university or the official usage. Therefore, the following aim has been estimated based on the usage of the calculator:
-
-1.To calculate the semester grade point
-2.To calculate the performance of total academic year
-3.The student can know how hard she/he has to work hard by calculating the possible grade
-4.To provide the desktop based personal program
-5.To use in the corporate environment
-
+Calculators are simply a tool, which helps students to solve problems. Since they eliminate tedious computations and algebraic manipulations that discourage many students, calculators allow more students to solve problems and appreciate the power and value of mathematics in the world today.
 
 ## Research
-According to tradition the first grades issued at Yale (and possibly the first in the country) were given out in the year 1785, when President Ezra Stiles, after examining 58 Seniors, recorded in his diary that there were ’Twenty Optimi, sixteen second Optimi, twelve Inferiores (Boni), ten Pejores [11]’” Keith Hoskin argues that the concept of grading students’ work quantitatively was developed by a tutor named William Farish and first implemented by the University of Cambridge in 1792[12]. Grading both shapes and reflects many fundamental areas of educational theory and practice.
-## Cost and Features
-Depending upon the project how well it is built and all the requirements will meet the cost and it can be varied according to the market.
-1.Grade Point Average Calculation
+Calculators also have the ability to store numbers into computer memory. Basic calculators usually store only one number at a time; more specific types are able to store many numbers represented in variables. The variables can also be used for constructing formulas. Some models have the ability to extend memory capacity to store more numbers; the extended memory address is termed an array index.
 
-To calculate a grade point average,
-
-Determine the grade points earned in each course by multiplying course credits by the appropriate grade-point equivalent
-Add the grade points earned in each course to calculate a semester total, and
-Divide this sum by the number of credits taken to determine the semester/session grade point average
-
-2. Cumulative Grade Point Average
-
-Cumulative Grade Point Average (CGPA) is based on the whole academic year evaluation or performance grade point. Usually, the CGPA is being calculate at the end of the entire academic year.
-
-3. Conversions across different point systems
-
-4. Being able to separately track your major GPA in addition to the overall metrics.
 ## Defining Our System
-1.Grade Point Average Calculation
-_images/gpa.jpg
-2.Cumulative Grade Point Average
-https://gpa-cgpa.readthedocs.io/en/latest/_images/cgpa.jpg
+ In this the calculator has 9 operators :
+`1.Addition
+ 2.Subtraction
+ 3.Multiply
+ 4.Division 
+ 5.Squareroot 
+ 6.Factorial 
+ 7.Area_of_Rectangle
+ 8.Area_of_Square
+ 9.Area_of_Parallelogram
+ 10.Area_of_Triangle
 
 
 
-    
 ## SWOT ANALYSIS
 
 ![SWOT](https://user-images.githubusercontent.com/82135750/114895658-50b9c180-9e2d-11eb-8257-383ad7cbf397.png)
 
 
-# 4W&#39;s and 1&#39;H
+ 4W&#39;s and 1&#39;H
 
 ## Who:
-GPA calculator
-CGPA calculator
+
+ This calculation can be easily done by the anyone with accuracy.
 
 ## What:
-All the applications have not provided with all these three features together. They have either used GPA calculation or CGPA calculation.
 
-
+Its most common use is for addition, subtraction, multiplication, and division along with few other mathematical operations.
 
 ## When:
-It began when online marksheet generation started and people started predicting their marks based on the grades obtained.
 
+Whenever there is use of any calculations where large number is there, than we can't calculate just by mind then we use it.
 
 ## Where:
-PA calculations involves all the students and the universities who get the gradepoints and work with grades and gradepoints respectively.
 
+It can be used anywhere by anybody like students, faculty, business people to do calculations.
 
 ## How:
 
-Students can convert thier results in any form either in grade format or in the gradepoint format or in the gpa format.
+By entering the appropriate number that you wanted to calculate.
 
-# Detail requirements
+# Detail requirements               
 ## High Level Requirements:
-User shall be able to save their records in a file.
-Data should not be lost in case of any system failure.
-Data should always be stored when the system got closed.
-The stored data should be lost after certain peroid of time.
-The data should not contain any redundancy. 
 
-
+| ID        | Description           | Status  |
+|:------------:|:-------------:|:-----:|
+|HR_01     | Arithmetic operations | Implemented |
+|HR_02     | Additional operations      |   Implemented |
+|HR_03 | Wrong operation entered,the calculator gets exit   | Implemented   |
+|HR_04  | The data should not be lost during failure | Future|
+|HR_05|Trignometric operations implementation|Future|
+|HR_06|Permutations and Combinations|Future|
+   
+   
 ##  Low level Requirements:
-User need to search by id for Student record to be updated, if no such record is available then "No Record Found" Message should be displayed to the student.
-If opening the file fails, then the system shloud prompt the message "Unable to access file" and should not end the program execution
-When user Log off the system, message shall be prompted asking the user to save new records to file before exiting or not.
-If the user have entered the wrong information then it should deisplay "Input valid information".
+
+| ID        | Description           | Status  |
+|:------------:|:-------------:|:-----:|
+|LR_01     |For each set of numbers the arthimetic operators like `+`,`-`,`*`,`/` are performed and output is retrieved| Implemented |
+|LR_02     | Each operation has a different methods so that it is easy to understand and implement     |   Implemented |
+|LR_03     |Additional operators are `square root`,`Area_of_Rectangle`,`factorial`,`Area_of_Square`,`Area_of_Parallelogram`,`Area_of_Triangle` are performed and output is retrieved|Implemented|
+|LR_04 | press 1 to continue to use calculator and 10 to end   | Implemented   |
+
+
