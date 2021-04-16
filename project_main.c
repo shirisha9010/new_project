@@ -1,91 +1,100 @@
-#include "calculator_operations.h"
+/**
+ * @file main.c
+ * @author shirisha
+ * @brief 
+ * @version 0.1
+ * @date 2021-04-13
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
+#include"calculator_operations.h"
 
-#define INVALID (0)
+operand configure={6,3};
+int option = 0;
+int n = 1;
+void sel_opt(void);
+int ope1=6;
+int ope2=2;
+int ope3=4;
+/**
+ * @brief GIVING THE OPERATIONS RESPECTIVE VALUES TO FUNTION ITS OPERATION
+ * 
+ */
+enum operations{ add=1, sub, mul, divi,s_root,fact,Rec,Sqr,Para,Trai,leave};
+int main(){
+        printf("\nWELCOME\n");            // WELCOME MESSAGE
 
-/* Calculator operation requested by user*/
-unsigned int calculator_operation = 0;
-
-/* Operands on which calculation is performed */
-int calculator_operand1 = 0;
-int calculator_operand2 = 0;
-
-/* Valid operations */
-enum operations{ SGPA, CGPA };
-
-
-/* Start of the application */
-int main()
-{
-    double gpa, credit, cgpa=0, s_cgpa, s_credit=0;
-    int choice;
-
-    printf("\t\tCGPA CALCULATOR\n");
-    printf("\t\t---------------\n\n");
-
-    printf("\t1. Subject wise CGPA\n\t2. Semister wise CGPA\n\t3. Grade & credit wise CGPA\nEnter your choice:\n");
-    scanf("%d", &choice);
-
-    printf("\n");
-
-    while(1)
-    {
-        if(choice==3)
-        {
-            printf("Enter your grade & credit (0 0 for Exit):\n");
-            scanf("%lf%lf", &gpa, &credit);
-
-            if(gpa==0 && credit==0)
-            {
-                break;
-            }
-
-            cgpa = cgpa + (gpa*credit);
-            s_credit = s_credit + credit;
-
-            s_cgpa = cgpa / s_credit;
-        }
-        else if(choice==2 || choice==1)
-        {
-            if(choice==2)
-            {
-                printf("Enter your Semister's GPA (0 for Exit):\n");
-            }
-            if(choice==1)
-            {
-                printf("Enter your Subject's GPA (0 for Exit):\n");
-            }
-            scanf("%lf", &gpa);
-
-            if(gpa==0)
-            {
-                break;
-            }
-
-            cgpa = cgpa + gpa;
-            s_credit++;
-
-            s_cgpa = cgpa / s_credit;
-        }
-        else
-        {
-            break;
-        }
-
-    }
-    if(choice==3)
-    {
-        printf("\n\tYour CGPA is: %.2lf\n\tAnd total credit: %.0lf\n", s_cgpa, s_credit);
-    }
-    else if(choice==2 || choice==1)
-    {
-        printf("\n\tYour CGPA is: %.2lf\n\tAnd total subject: %.0lf\n", s_cgpa, s_credit);
-    }
-    else
-    {
-        printf("Invalid choice\n");
-    }
-
-
-    return 0;
+while(n==1){
+  sel_opt();
 }
+if(n!=1){
+    printf("Thankyou ....!!");
+}
+  
+    }
+    /**
+     * @brief enter the option based on the calculation
+     * 
+     */
+  void sel_opt(){
+
+      printf("Operations\n");
+      printf("\n1.Addition\n2.Subtraction\n3.Multiply\n4.Division\n5.Squareroot\n6.Factorial\n7.Area_of_Rectangle\n8.Area_of_Square\n9.Area_of_Parallelogram\n10.Area_of_Triangle\n11.LEAVE\n");
+      printf("Enter ur option\n");
+      scanf("%d",&option);
+
+      switch(option){
+          case add:
+          addition(&configure);
+          break;
+
+          case sub:
+          subtraction(&configure);
+          break;
+
+          case mul:
+          multiplication(&ope1,&ope2);
+          break;
+
+          case divi:
+          division(&ope1,&ope2);
+          break;
+
+          case s_root:
+          squareroot(&ope3);
+          break;
+
+          case fact:
+          factorial(&ope3);
+          break;
+
+          case Rec:
+          Area_of_Rectangle(&ope1,&ope2);
+          break;
+
+          case Sqr:
+          Area_of_Square(&ope3);
+          break;
+
+          case Para:
+          Area_of_Parallelogram(&ope1,&ope2);
+          break;
+
+          case Trai:
+          Area_of_Triangle(&ope1,&ope2);
+          break;
+
+          case leave:
+          exit(0);
+          break;
+
+          default:
+          printf("WRONG OPERATION\n");
+          
+      }
+      printf("enter 1 to continue\n");
+    scanf("%d",&n);
+ }    
+   
