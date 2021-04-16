@@ -1,65 +1,58 @@
-# Name of the project
-PROJECT_NAME = Calculator
+PROJECT_NAME = CALCULATOR
+TEST_PROJECT_NAME = Test_$(PROJECT_NAME)
 
-# Output directory
-BUILD = build
-
-# All source code files
-SRC = project_main.c\
-src/calculator_operations.c
-
+BUILD = Build
+# ALL source code files
+SRC = src/calculator_operations.c
 # All test source files
-TEST_SRC = src/calculator_operations.c\
-test/test_calculator_operations.c\
-unity/unity.c\
+TEST_SRC = test/test_calculator_operations.c\
+unity/unity.c
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+INC = -Iinc\
+-Iunity
 
-# All include folders with header files
-INC	= -Iinc\
--Iunity\
+#To check if the OS is Windows or Linux and set the executable file extension and delete command accordingly
+ifdef OS
+   RM = del /q
+   FixPath = $(subst /,\,$1)
+   EXEC = exe
+else
+   ifeq ($(shell uname), Linux)
+      RM = rm -rf
+      FixPath = $1
+	  EXEC = out
+   endif
+endif
 
-#Library Inlcudes
-#if working with CUnit 
-#INCLUDE_LIBS = -lcunit
-INCLUDE_LIBS =
+# Makefile will not run target command if the name with file already exists. To override, use .PHONY
+.PHONY : all test coverage run clean
 
-# Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+all:$(BUILD)
+	gcc main.c $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD)/$(PROJECT_NAME).$(EXEC))
 
-# Document files
-DOCUMENTATION_OUTPUT = documentation/html
-
-# Default target built
-$(PROJECT_NAME):all
-
-# Run the target even if the matching name exists
-.PHONY: run clean test doc all
-
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
-
-# Call `make run` to run the application
-run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
-
-# Document the code using Doxygen
-#doc:
-#	make -C ./documentation
-
-# Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-#Coverage
-coverageCheck:$(BUILD)
-	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-
-# Remove all the built files, invoke by `make clean`
+run: $(BUILD)
+	$(call FixPath,$(BUILD)/$(PROJECT_NAME).$(EXEC))
+	
+coverage:$(BUILD)
+	gcc $(TEST_SRC) $(SRC) $(INC) -fprofile-arcs -ftest-coverage -lm -o $(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
+	$(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
+   
 clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
+	$(RM) $(call FixPath,$(BUILD)/*)
+	$(RM) *.gcda *.gcov *gcno 
 
-# Create new build folder if not present
+cppcheck:
+	cppcheck --enable=all --check-config --suppress=missingIncludeSystem main.c $(SRC) -Iinc 
+	
+valgrind:
+
+	gcc $(TEST_SRC) $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
+	valgrind $(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
+
+test:$(BUILD)
+# gcc $(TEST_SRC) $(SRC) $(INC) -fprofile-arcs -ftest-coverage -lm -o $(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
+	gcc $(TEST_SRC) $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
+		$(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
+
 $(BUILD):
-	mkdir build
+	mkdir $(BUILD)
