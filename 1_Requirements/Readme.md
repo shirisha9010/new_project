@@ -10,19 +10,6 @@ Calculators also have the ability to store numbers into computer memory. Basic c
 
 ## Defining Our System
 
- In this the calculator has 9 operators :
-`- Addition
- - Subtraction
- - Multiply
- - Division 
- - Squareroot 
- - Factorial 
- - Area_of_Rectangle
- - Area_of_Square
- - Area_of_Parallelogram
- - Area_of_Triangle
-    
-
  In this the calculator has 10 operators :
  -Addition
  - Subtraction
