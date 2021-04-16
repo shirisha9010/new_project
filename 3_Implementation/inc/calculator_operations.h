@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * @file calculator_operations.h
  * @author shirisha
@@ -15,6 +16,9 @@
 #include<math.h>
 
 typedef struct operand{
+=======
+ypedef struct operand{
+>>>>>>> f668a276d46dc3601284b3f970b4b67d887f7eb5
     int ope1;                        //variables used in calculator through structure
     int ope2;
 }operand;
@@ -33,7 +37,14 @@ int division(int *operand1, int *operand2);           // variables passed throug
 int squareroot(int *operand3);
 int factorial(int *operand);
 int Area_of_Rectangle(int *operand1,int *operand2);
+<<<<<<< HEAD
 int Area_of_Square(int *operand3);
 int Area_of_Parallelogram(int *operand1, int *operand2);
 int Area_of_Triangle(int *operand1, int *operand2);
 #endif  
+=======
+int Area_of_Square(int *operand1, int *operand2);
+int Area_of_Parallelogram(int *operand1, int *operand2);
+int Area_of_Triangle(int *operand1, int *operand2);
+#endif  
+>>>>>>> f668a276d46dc3601284b3f970b4b67d887f7eb5

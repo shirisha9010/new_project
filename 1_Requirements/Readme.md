@@ -1,11 +1,16 @@
 # Requirements
 ## Introduction
+<<<<<<< HEAD
 Calculators are simply a tool, which helps students to solve problems. Since they eliminate tedious computations and algebraic manipulations that discourage many students, calculators allow more students to solve problems and appreciate the power and value of mathematics in the world today.
+=======
+Calculators are very simple tool, which helps students to play with the problems. Since they eliminate tedious computations and algebraic manipulations that discourage many students, calculators allow more students to solve problems and appreciate the power and value of mathematics in the world today. This also increase the intrest towards mathematics.
+>>>>>>> f668a276d46dc3601284b3f970b4b67d887f7eb5
 
 ## Research
 Calculators also have the ability to store numbers into computer memory. Basic calculators usually store only one number at a time; more specific types are able to store many numbers represented in variables. The variables can also be used for constructing formulas. Some models have the ability to extend memory capacity to store more numbers; the extended memory address is termed an array index.
 
 ## Defining Our System
+<<<<<<< HEAD
  In this the calculator has 9 operators :
 `1.Addition
  2.Subtraction
@@ -23,8 +28,28 @@ Calculators also have the ability to store numbers into computer memory. Basic c
 
 ![SWOT](https://user-images.githubusercontent.com/82135750/114895658-50b9c180-9e2d-11eb-8257-383ad7cbf397.png)
 
+=======
+ In this the calculator has 10 operators :
+ -Addition
+ - Subtraction
+ - Multiply
+ - Division 
+ - Squareroot 
+ - Factorial 
+ - Area_of_Rectangle
+ - Area_of_Square
+ - Area_of_Parallelogram
+ - Area_of_Triangle
 
-# 4W&#39;s and 1&#39;H
+
+
+## SWOT ANALYSIS
+>>>>>>> f668a276d46dc3601284b3f970b4b67d887f7eb5
+
+![SWOT](https://user-images.githubusercontent.com/82135750/114895658-50b9c180-9e2d-11eb-8257-383ad7cbf397.png)
+
+
+ 4W&#39;s and 1&#39;H
 
 ## Who:
 
