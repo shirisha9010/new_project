@@ -55,8 +55,7 @@ test:$(BUILD)
 		$(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
 
 $(BUILD):
-<<<<<<< HEAD
+
 	mkdir $(BUILD)
-=======
+	
 	mkdir $(BUILD)
->>>>>>> f668a276d46dc3601284b3f970b4b67d887f7eb5
