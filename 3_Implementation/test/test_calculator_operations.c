@@ -1,113 +1,77 @@
-#include "unity.h"
-#include <calculator_operations.h>
-#define PROJECT_NAME    "CALCULATOR"
-
-operand test={3,1},test1={-3,-1};
-int v1=6,v2=2,v3=4;
-int v4=-6,v5=-2,v6=-4;
-int d1=2,d2=0;
-/* Required by the unity test framework */
-void setUp(){}
-/* Required by the unity test framework */
-void tearDown(){}
-
-/* Prototypes for all the test functions */
-void test_add(void);
-void test_subtract(void);
-void test_multiply(void);
-void test_divide(void);
-void test_divide_by0(void);
-void test_s_root(void);
-void test_fact(void);
-void test_fact_negative(void);
-void test_fact_by0(void);
-void test_Rec(void);
-void test_Sqr(void);
-void test_Para(void);
-void test_Trai(void);
-
-
-
-
-
-/* Start of the application test */
-int main()
-{
-/* Initiate the Unity Test Framework */
-  UNITY_BEGIN();
-
-/* Run Test functions */
-  RUN_TEST(test_add);
-  RUN_TEST(test_subtract);
-  RUN_TEST(test_multiply);
-  RUN_TEST(test_divide);
-  RUN_TEST(test_s_root);
-  RUN_TEST(test_fact);
-  RUN_TEST(test_Rec);
-RUN_TEST(test_fact_negative);
-RUN_TEST(test_fact_by0);
-RUN_TEST(test_divide_by0);
-RUN_TEST(test_Sqr);
-RUN_TEST(test_Para);
-RUN_TEST(test_Trai);
-
-  /* Close the Unity Test Framework */
-  return UNITY_END();
+#include "calculator_operations.h"
+#include "stdio.h"
+/**
+ * @brief   FUNCTION DECLARATION OF ALL THE FUNCTIONS CALLED
+ * 
+ * @param find 
+ * @return int 
+ */
+int addition(operand *find){
+   int final=find->ope1 + find->ope2;                     // addition of operands
+   printf(" Addition of %d + %d = %d\n",find->ope1,find->ope2,final);
+   return final;
+}
+int subtraction(operand  *find){
+   int final=(find->ope1)-(find->ope2);                     // subtraction of operands
+   printf("subtraction of %d - %d = %d\n",find->ope1,find->ope2,final);
+   return final;
 }
 
-/* Write all the test functions */ 
-void test_add(void) {
-  TEST_ASSERT_EQUAL(4, addition(&test));
-  TEST_ASSERT_EQUAL(-4, addition(&test1));
+int multiplication(int *operand1,int *operand2){
+   int final= (operand1)(*operand2);                         // multiplication of operands
+    printf(" multiplication = %d\n",final);
+    return final;
 }
 
-void test_subtract(void) {
-  TEST_ASSERT_EQUAL(2,subtraction(&test));
-  TEST_ASSERT_EQUAL(-2, subtraction(&test1));
+int division(int *operand1,int *operand2){
+    if(*operand2==0){
+        printf("divisor can't be zero");                 // division when any one of the operand is 0
+        return -1;
+    }
+
+   int final= (*operand1)/(*operand2);                  
+    printf(" quotient = %d\n",final);
+    printf(" remainder = %d\n",(*operand1)%(*operand2));     // division of 2 operands
+    return final;
+}
+int squareroot(int *operand3){
+   int final= sqrt(*operand3);               
+    printf(" squareroot %d = %d\n",*operand3,final);
+    return final;
+}
+int factorial(int *operand3){
+  if(*operand3 < 0)
+    {printf("factorial for negative numbers not possible\n");          // factorial of the operand
+      return -1;}
+  if(*operand3 == 0)
+   { return 1;}
+   int fact=1;
+    for (int i = 1; i <= *operand3;i++) {
+            fact *= i;
+        }
+ printf("%d! = %d\n",*operand3,fact);
+ return fact;
 }
 
-void test_multiply(void) {
-  TEST_ASSERT_EQUAL(12, multiplication(&v1,&v2));
-  TEST_ASSERT_EQUAL(12, multiplication(&v4,&v5));
+int Area_of_Rectangle(int *operand1,int *operand2){
+   float final= (operand1)(*operand2);               
+    printf(" Area_of_Rectangle = %.3f\n",final);                             // Area_of_Rectangle of operand
+    return final;
 }
 
-void test_divide(void) {
-  TEST_ASSERT_EQUAL(3, division(&v1,&v2));
-  TEST_ASSERT_EQUAL(3, division(&v4,&v5));
-}
-void test_divide_by0(void){
-  TEST_ASSERT_EQUAL(-1, division(&d1,&d2));
+int Area_of_Square(int *operand3){
+   float final= 4*(*operand3);               
+    printf("Area_of_Square = %.3f\n",final);                                // Area_of_Square of operand
+    return final;
 }
 
-void test_s_root(void) {
-  TEST_ASSERT_EQUAL(2, squareroot(&v3));
+int Area_of_Parallelogram(int *operand1,int *operand2){
+   int final= (operand1)(*operand2);               
+    printf(" Area_of_parallelogram = %d\n",final);                           //  Area_of_Parallelogram operand
+    return final;
 }
-
-void test_fact(void) {
-  TEST_ASSERT_EQUAL(24, factorial(&v3));
-}
-
-void test_fact_negative(void) {
-  TEST_ASSERT_EQUAL(-1, factorial(&v6));
-}
-
-void test_fact_by0(void) {
-  TEST_ASSERT_EQUAL(1, factorial(&d2));
-}
-
-void test_Rec(void) {
-  TEST_ASSERT_EQUAL(12, Area_of_Rectangle(&v1,&v2));
-  TEST_ASSERT_EQUAL(12, Area_of_Rectangle(&v4,&v5));
-}
-
-void test_Sqr(void) {
-  TEST_ASSERT_EQUAL(16, Area_of_Square(&v3));
-
-}
-
-void test_Para(void) {
-  TEST_ASSERT_EQUAL(24, Area_of_Parallelogram(&v1,&v3));
-}
-void test_Trai(void) {
-  TEST_ASSERT_EQUAL(12, Area_of_Triangle(&v1,&v2));
+int Area_of_Triangle(int *operand1,int *operand2){
+   int final= (0.5)(*operand1)(*operand2);               
+    printf(" Area_of_Triangle = %d\n",final);                                // Area_of_Triangle of operand
+    return final;
 }
