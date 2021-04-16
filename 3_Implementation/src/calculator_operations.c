@@ -55,23 +55,23 @@ int factorial(int *operand3){
 
 int Area_of_Rectangle(int *operand1,int *operand2){
    float final= (*operand1)*(*operand2);               
-    printf(" Area_of_Rectangle = %.3f\n",final);                             // Area_of_Rectangle of operand
+    printf(" Area of Rectangle = %.3f\n",final);                             // Area_of_Rectangle of operand
     return final;
 }
 
 int Area_of_Square(int *operand3){
-   float final= (*operand3);               
-    printf("Area_of_Square = %.3f\n",final);                                // Area_of_Square of operand
+   float final= 4*(*operand3);               
+    printf("Area of Square = %.3f\n",final);                                // Area_of_Square of operand
     return final;
 }
 
 int Area_of_Parallelogram(int *operand1,int *operand2){
    int final= (*operand1)*(*operand2);               
-    printf(" Area_of_parallelogram = %d\n",final);                           //  Area_of_Parallelogram operand
+    printf(" Area of parallelogram = %d\n",final);                           //  Area_of_Parallelogram operand
     return final;
 }
 int Area_of_Triangle(int *operand1,int *operand2){
-   int final= (0.5)*+(*operand1)*(*operand2);               
-    printf(" Area_of_Triangle = %d\n",final);                                // Area_of_Triangle of operand
+   int final= (0.5)*(*operand1)*(*operand2);               
+    printf(" Area of Triangle = %d\n",final);                                // Area_of_Triangle of operand
     return final;
 }

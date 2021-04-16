@@ -44,7 +44,7 @@ clean:
 cppcheck:
 	cppcheck --enable=all --check-config --suppress=missingIncludeSystem main.c $(SRC) -Iinc 
 	
-valgrind:
+valgrind:$(BUILD)
 
 	gcc $(TEST_SRC) $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
 	valgrind $(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
@@ -57,5 +57,3 @@ test:$(BUILD)
 $(BUILD):
 
 	mkdir $(BUILD)
-	
-

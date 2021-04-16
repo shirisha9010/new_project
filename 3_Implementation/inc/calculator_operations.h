@@ -1,4 +1,3 @@
-
 /**
  * @file calculator_operations.h
  * @author shirisha
@@ -39,7 +38,4 @@ int Area_of_Rectangle(int *operand1,int *operand2);
 int Area_of_Square(int *operand3);
 int Area_of_Parallelogram(int *operand1, int *operand2);
 int Area_of_Triangle(int *operand1, int *operand2);
-#endif  
-
- 
-
+#endif

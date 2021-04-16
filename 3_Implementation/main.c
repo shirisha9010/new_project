@@ -1,3 +1,4 @@
+
 /**
  * @file main.c
  * @author shirisha
@@ -96,5 +97,4 @@ if(n!=1){
       }
       printf("enter 1 to continue\n");
     scanf("%d",&n);
- }    
-   
+ }
