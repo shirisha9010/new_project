@@ -25,7 +25,7 @@ int multiplication(int *operand1,int *operand2){
 
 int division(int *operand1,int *operand2){
     if(*operand2==0){
-        printf("divisor can;t be zero");                 // division when any one of the operand is 0
+        printf("divisor can't be zero");                 // division when any one of the operand is 0
         return -1;
     }
 
