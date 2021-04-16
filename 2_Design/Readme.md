@@ -3,4 +3,5 @@
 
 
 ## Structural Diagram
+![Structural Diagram](https://user-images.githubusercontent.com/82135750/114973741-ad08f980-9e9e-11eb-9a09-376f72852fa7.png)
 
