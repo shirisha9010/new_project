@@ -113,3 +113,4 @@ void test_Para(void) {
 void test_Trai(void) {
   TEST_ASSERT_EQUAL(36, Area_of_Trai(&v1,&v2));
   TEST_ASSERT_EQUAL(36, Area_of_Trai(&v4,&v5));
+}
