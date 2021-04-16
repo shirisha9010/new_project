@@ -14,8 +14,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
-
-typedef struct operand{
     
 typedef struct operand{
 
@@ -43,8 +41,5 @@ int Area_of_Parallelogram(int *operand1, int *operand2);
 int Area_of_Triangle(int *operand1, int *operand2);
 #endif  
 
-int Area_of_Square(int *operand1, int *operand2);
-int Area_of_Parallelogram(int *operand1, int *operand2);
-int Area_of_Triangle(int *operand1, int *operand2);
-#endif  
+ 
 
