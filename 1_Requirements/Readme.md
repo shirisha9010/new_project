@@ -1,6 +1,6 @@
 # Requirements
 ## Introduction
-Calculators are simply a tool, which helps students to solve problems. Since they eliminate tedious computations and algebraic manipulations that discourage many students, calculators allow more students to solve problems and appreciate the power and value of mathematics in the world today.
+Calculators are very simple tool, which helps students to play with the problems. Since they eliminate tedious computations and algebraic manipulations that discourage many students, calculators allow more students to solve problems and appreciate the power and value of mathematics in the world today. This also increase the intrest towards mathematics.
 
 ## Research
 Calculators also have the ability to store numbers into computer memory. Basic calculators usually store only one number at a time; more specific types are able to store many numbers represented in variables. The variables can also be used for constructing formulas. Some models have the ability to extend memory capacity to store more numbers; the extended memory address is termed an array index.
