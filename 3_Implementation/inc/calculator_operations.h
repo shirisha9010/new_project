@@ -17,7 +17,7 @@
 
 typedef struct operand{
     
-ypedef struct operand{
+typedef struct operand{
 
     int ope1;                        //variables used in calculator through structure
     int ope2;
