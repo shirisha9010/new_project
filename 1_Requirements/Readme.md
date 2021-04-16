@@ -8,16 +8,15 @@ Calculators also have the ability to store numbers into computer memory. Basic c
 ## Defining Our System
  In this the calculator has 9 operators :
 `-Addition
-
  -Subtraction
- -.Multiply
- 4.Division 
- 5.Squareroot 
- 6.Factorial 
- 7.Area_of_Rectangle
- 8.Area_of_Square
- 9.Area_of_Parallelogram
- 10.Area_of_Triangle
+ -Multiply
+ -Division 
+ -Squareroot 
+ -Factorial 
+ -Area_of_Rectangle
+ -Area_of_Square
+ -Area_of_Parallelogram
+ -Area_of_Triangle
 
 
 
