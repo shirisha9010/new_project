@@ -101,8 +101,8 @@ void test_Rec(void) {
 }
 
 void test_Sqr(void) {
-  TEST_ASSERT_EQUAL(16, Area_of_square(&v3));
-  TEST_ASSERT_EQUAL(16, Area_of_square(&v6));
+  TEST_ASSERT_EQUAL(16, Area_of_Square(&v3));
+  TEST_ASSERT_EQUAL(16, Area_of_Square(&v6));
 
 }
 
@@ -111,6 +111,6 @@ void test_Para(void) {
  TEST_ASSERT_EQUAL(24, Area_of_Parallelogram(&v4,&v6));
 }
 void test_Trai(void) {
-  TEST_ASSERT_EQUAL(36, Area_of_Trai(&v1,&v2));
-  TEST_ASSERT_EQUAL(36, Area_of_Trai(&v4,&v5));
+  TEST_ASSERT_EQUAL(36, Area_of_Triangle(&v1,&v2));
+  TEST_ASSERT_EQUAL(36, Area_of_Triangle(&v4,&v5));
 }
