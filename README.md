@@ -6,6 +6,11 @@
 
 [![C/C++ CI - Build Status](https://github.com/shirisha9010/new_project/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/shirisha9010/new_project/actions/workflows/c-cpp.yml)  [![Code Quality - Static Code - Cppcheck](https://github.com/shirisha9010/new_project/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/shirisha9010/new_project/actions/workflows/cppcheck.yml)    [![Contribution Check - Git Inspector](https://github.com/shirisha9010/new_project/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/shirisha9010/new_project/actions/workflows/gitinspector.yml)   [![Unit Testing - Unity](https://github.com/shirisha9010/new_project/actions/workflows/unity.yml/badge.svg)](https://github.com/shirisha9010/new_project/actions/workflows/unity.yml)
 
+## Folder Structure
+#_Requirements
+#_Design
+#_Implementation
+#_Test Plan
 
 ## Contributors List
 1. shirisha9010
